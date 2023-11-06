@@ -27,29 +27,29 @@ namespace TT_GeeksForLess_Vladyslav_Slyzkoukhyi.Controllers
                           Problem("Entity set 'FolderContext.CreatingDigitalImages'  is null.");
         }
 
-        // GET: CreatingDigitalImages/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.CreatingDigitalImages == null)
-            {
-                return NotFound();
-            }
+        //// GET: CreatingDigitalImages/Details/5
+        //public async Task<IActionResult> Details(int? id)
+        //{
+        //    if (id == null || _context.CreatingDigitalImages == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            var creatingDigitalImages = await _context.CreatingDigitalImages
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (creatingDigitalImages == null)
-            {
-                return NotFound();
-            }
+        //    var creatingDigitalImages = await _context.CreatingDigitalImages
+        //        .FirstOrDefaultAsync(m => m.Id == id);
+        //    if (creatingDigitalImages == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            return View(creatingDigitalImages);
-        }
+        //    return View(creatingDigitalImages);
+        //}
 
-        // GET: CreatingDigitalImages/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
+        //// GET: CreatingDigitalImages/Create
+        //public IActionResult Create()
+        //{
+        //    return View();
+        //}
         // GET: CreatingDigitalImages/Create
         public IActionResult CreatingDigitalImages()
         {
@@ -84,113 +84,113 @@ namespace TT_GeeksForLess_Vladyslav_Slyzkoukhyi.Controllers
             return View();
         }
 
-        // POST: CreatingDigitalImages/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,ResourcesId,GraphicProductId,EvidenceId")] CreatingDigitalImages creatingDigitalImages)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(creatingDigitalImages);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(creatingDigitalImages);
-        }
+        //// POST: CreatingDigitalImages/Create
+        //// To protect from overposting attacks, enable the specific properties you want to bind to.
+        //// For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Create([Bind("Id,Name,ResourcesId,GraphicProductId,EvidenceId")] CreatingDigitalImages creatingDigitalImages)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        _context.Add(creatingDigitalImages);
+        //        await _context.SaveChangesAsync();
+        //        return RedirectToAction(nameof(Index));
+        //    }
+        //    return View(creatingDigitalImages);
+        //}
 
-        // GET: CreatingDigitalImages/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null || _context.CreatingDigitalImages == null)
-            {
-                return NotFound();
-            }
+        //// GET: CreatingDigitalImages/Edit/5
+        //public async Task<IActionResult> Edit(int? id)
+        //{
+        //    if (id == null || _context.CreatingDigitalImages == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            var creatingDigitalImages = await _context.CreatingDigitalImages.FindAsync(id);
-            if (creatingDigitalImages == null)
-            {
-                return NotFound();
-            }
-            return View(creatingDigitalImages);
-        }
+        //    var creatingDigitalImages = await _context.CreatingDigitalImages.FindAsync(id);
+        //    if (creatingDigitalImages == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return View(creatingDigitalImages);
+        //}
 
-        // POST: CreatingDigitalImages/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,ResourcesId,GraphicProductId,EvidenceId")] CreatingDigitalImages creatingDigitalImages)
-        {
-            if (id != creatingDigitalImages.Id)
-            {
-                return NotFound();
-            }
+        //// POST: CreatingDigitalImages/Edit/5
+        //// To protect from overposting attacks, enable the specific properties you want to bind to.
+        //// For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Edit(int id, [Bind("Id,Name,ResourcesId,GraphicProductId,EvidenceId")] CreatingDigitalImages creatingDigitalImages)
+        //{
+        //    if (id != creatingDigitalImages.Id)
+        //    {
+        //        return NotFound();
+        //    }
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(creatingDigitalImages);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!CreatingDigitalImagesExists(creatingDigitalImages.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(creatingDigitalImages);
-        }
+        //    if (ModelState.IsValid)
+        //    {
+        //        try
+        //        {
+        //            _context.Update(creatingDigitalImages);
+        //            await _context.SaveChangesAsync();
+        //        }
+        //        catch (DbUpdateConcurrencyException)
+        //        {
+        //            if (!CreatingDigitalImagesExists(creatingDigitalImages.Id))
+        //            {
+        //                return NotFound();
+        //            }
+        //            else
+        //            {
+        //                throw;
+        //            }
+        //        }
+        //        return RedirectToAction(nameof(Index));
+        //    }
+        //    return View(creatingDigitalImages);
+        //}
 
-        // GET: CreatingDigitalImages/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null || _context.CreatingDigitalImages == null)
-            {
-                return NotFound();
-            }
+        //// GET: CreatingDigitalImages/Delete/5
+        //public async Task<IActionResult> Delete(int? id)
+        //{
+        //    if (id == null || _context.CreatingDigitalImages == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            var creatingDigitalImages = await _context.CreatingDigitalImages
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (creatingDigitalImages == null)
-            {
-                return NotFound();
-            }
+        //    var creatingDigitalImages = await _context.CreatingDigitalImages
+        //        .FirstOrDefaultAsync(m => m.Id == id);
+        //    if (creatingDigitalImages == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            return View(creatingDigitalImages);
-        }
+        //    return View(creatingDigitalImages);
+        //}
 
-        // POST: CreatingDigitalImages/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            if (_context.CreatingDigitalImages == null)
-            {
-                return Problem("Entity set 'FolderContext.CreatingDigitalImages'  is null.");
-            }
-            var creatingDigitalImages = await _context.CreatingDigitalImages.FindAsync(id);
-            if (creatingDigitalImages != null)
-            {
-                _context.CreatingDigitalImages.Remove(creatingDigitalImages);
-            }
+        //// POST: CreatingDigitalImages/Delete/5
+        //[HttpPost, ActionName("Delete")]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> DeleteConfirmed(int id)
+        //{
+        //    if (_context.CreatingDigitalImages == null)
+        //    {
+        //        return Problem("Entity set 'FolderContext.CreatingDigitalImages'  is null.");
+        //    }
+        //    var creatingDigitalImages = await _context.CreatingDigitalImages.FindAsync(id);
+        //    if (creatingDigitalImages != null)
+        //    {
+        //        _context.CreatingDigitalImages.Remove(creatingDigitalImages);
+        //    }
             
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
+        //    await _context.SaveChangesAsync();
+        //    return RedirectToAction(nameof(Index));
+        //}
 
-        private bool CreatingDigitalImagesExists(int id)
-        {
-          return (_context.CreatingDigitalImages?.Any(e => e.Id == id)).GetValueOrDefault();
-        }
+        //private bool CreatingDigitalImagesExists(int id)
+        //{
+        //  return (_context.CreatingDigitalImages?.Any(e => e.Id == id)).GetValueOrDefault();
+        //}
     }
 }

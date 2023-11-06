@@ -13,6 +13,7 @@
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "applicationUrl": "https://localhost:7137;http://localhost:5202",
+      "launchUrl": "https://localhost:7137/CreatingDigitalImages",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -20,6 +21,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
+      "launchUrl": "https://localhost:7137/CreatingDigitalImages",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
