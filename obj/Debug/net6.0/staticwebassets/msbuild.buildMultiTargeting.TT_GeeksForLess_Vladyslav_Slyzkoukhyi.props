@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\TT_GeeksForLess_Vladyslav_Slyzkoukhyi.props" />
+</Project>

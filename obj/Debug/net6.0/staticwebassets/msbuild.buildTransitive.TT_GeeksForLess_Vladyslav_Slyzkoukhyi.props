@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\TT_GeeksForLess_Vladyslav_Slyzkoukhyi.props" />
+</Project>
