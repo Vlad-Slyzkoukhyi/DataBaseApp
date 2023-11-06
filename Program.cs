@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
+using Newtonsoft.Json;
 using TT_GeeksForLess_Vladyslav_Slyzkoukhyi;
 
 internal class Program
@@ -10,6 +12,11 @@ internal class Program
         var builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
+        ObjectToSerialize serializedObjects = new ObjectToSerialize();
+
+        string jsonWrite = JsonConvert.SerializeObject(serializedObjects, Formatting.Indented);
+        File.WriteAllText(@"result.json", jsonWrite);        
+
         var configuration = new ConfigurationBuilder()
             .SetBasePath(builder.Environment.ContentRootPath)
             .AddJsonFile("appsettings.json")
@@ -47,5 +54,5 @@ internal class Program
             pattern: "{controller=Home}/{action=Index}/{id?}");
         
         app.Run();
-    }
+    }    
 }

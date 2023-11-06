@@ -293,3 +293,4 @@ E:\Study\Main Academy\ASP.NET\TestTask\GeekForLess\TT_GeeksForLess_Vladyslav_Sly
 E:\Study\Main Academy\ASP.NET\TestTask\GeekForLess\TT_GeeksForLess_Vladyslav_Slyzkoukhyi\TT_GeeksForLess_Vladyslav_Slyzkoukhyi\bin\Debug\net6.0\runtimes\win-arm64\native\e_sqlite3.dll
 E:\Study\Main Academy\ASP.NET\TestTask\GeekForLess\TT_GeeksForLess_Vladyslav_Slyzkoukhyi\TT_GeeksForLess_Vladyslav_Slyzkoukhyi\bin\Debug\net6.0\runtimes\win-x64\native\e_sqlite3.dll
 E:\Study\Main Academy\ASP.NET\TestTask\GeekForLess\TT_GeeksForLess_Vladyslav_Slyzkoukhyi\TT_GeeksForLess_Vladyslav_Slyzkoukhyi\bin\Debug\net6.0\runtimes\win-x86\native\e_sqlite3.dll
+E:\Study\Main Academy\ASP.NET\TestTask\GeekForLess\TT_GeeksForLess_Vladyslav_Slyzkoukhyi\TT_GeeksForLess_Vladyslav_Slyzkoukhyi\bin\Debug\net6.0\result.json

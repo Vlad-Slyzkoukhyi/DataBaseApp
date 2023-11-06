@@ -8,6 +8,7 @@ namespace TT_GeeksForLess_Vladyslav_Slyzkoukhyi
         public FolderContext(DbContextOptions<FolderContext> options) : base(options)
         {
         }
+
         public DbSet<CreatingDigitalImages> CreatingDigitalImages { get; set; }
         public DbSet<Resources> Resources { get; set; }
         public DbSet<PrimarySources> PrimarySources { get; set; }
@@ -16,5 +17,6 @@ namespace TT_GeeksForLess_Vladyslav_Slyzkoukhyi
         public DbSet<GraphicProducts> GraphicProducts { get; set; }
         public DbSet<FinalProduct> FinalProducts { get; set; }
         public DbSet<Process> Processes { get; set; }
+        public DbSet<Serializer> Serializer { get; set; }
     }
 }

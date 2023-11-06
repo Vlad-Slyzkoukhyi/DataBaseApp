@@ -1,22 +1,14 @@
-﻿{
-  "iisSettings": {
-    "windowsAuthentication": false,
-    "anonymousAuthentication": true,
-    "iisExpress": {
-      "applicationUrl": "http://localhost:43655",
-      "sslPort": 44346
-    }
-  },
+{
   "profiles": {
     "TT_GeeksForLess_Vladyslav_Slyzkoukhyi": {
       "commandName": "Project",
-      "dotnetRunMessages": true,
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:7137;http://localhost:5202",
       "launchUrl": "https://localhost:7137/CreatingDigitalImages",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:7137;http://localhost:5202"
     },
     "IIS Express": {
       "commandName": "IISExpress",
@@ -25,6 +17,25 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "launchBrowser": true,
+      "launchUrl": "https://localhost:7137/CreatingDigitalImages",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "https://localhost:7137;http://localhost:5202"
+      },
+      "distributionName": ""
+    }
+  },
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:43655",
+      "launchUrl": "https://localhost:7137/CreatingDigitalImages",
+      "sslPort": 44346
     }
   }
 }
