@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TT_GeeksForLess_Vladyslav_Slyzkoukhyi;
 
@@ -11,9 +12,11 @@ using TT_GeeksForLess_Vladyslav_Slyzkoukhyi;
 namespace TT_GeeksForLess_Vladyslav_Slyzkoukhyi.Migrations
 {
     [DbContext(typeof(FolderContext))]
-    partial class FolderContextModelSnapshot : ModelSnapshot
+    [Migration("20231107081020_ImportCatalogToDB")]
+    partial class ImportCatalogToDB
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

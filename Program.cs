@@ -12,10 +12,15 @@ internal class Program
         var builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
-        ObjectToSerialize serializedObjects = new ObjectToSerialize();
+        ObjectToSerialize serializedObjects = new ObjectToSerialize();        
 
         string jsonWrite = JsonConvert.SerializeObject(serializedObjects, Formatting.Indented);
-        File.WriteAllText(@"result.json", jsonWrite);        
+        File.WriteAllText(@"result.json", jsonWrite);
+
+        var jsonToDB = new TT_GeeksForLess_Vladyslav_Slyzkoukhyi.Models.Serializer()
+        {
+            JsonText = jsonWrite
+        };
 
         var configuration = new ConfigurationBuilder()
             .SetBasePath(builder.Environment.ContentRootPath)
@@ -32,8 +37,6 @@ internal class Program
         builder.Services.AddControllersWithViews();
 
         var app = builder.Build();
-
-
         // Configure the HTTP request pipeline.
         if (!app.Environment.IsDevelopment())
         {

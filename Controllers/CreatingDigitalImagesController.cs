@@ -26,7 +26,7 @@ namespace TT_GeeksForLess_Vladyslav_Slyzkoukhyi.Controllers
                           View(await _context.CreatingDigitalImages.ToListAsync()) :
                           Problem("Entity set 'FolderContext.CreatingDigitalImages'  is null.");
         }
-
+        
         //// GET: CreatingDigitalImages/Details/5
         //public async Task<IActionResult> Details(int? id)
         //{

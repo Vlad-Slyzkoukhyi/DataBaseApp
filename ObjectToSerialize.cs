@@ -11,8 +11,7 @@
             new Models.PrimarySources { },
             new Models.SecondarySources { },
             new Models.Resources { },
-            new Models.Process { },
-            new Models.Serializer { }
+            new Models.Process { }            
         };
         public List<object> ObjectsToSerialize => _objectsToSerialize;
     }
